@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink } from "react-router";
 import { Heart, ShoppingCart } from "lucide-react";
-import { useLiked } from "../context/LikedContext"; // ✅ Contextni import qildik
+import { useLiked } from "../context/LikedContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { useBasket } from "../context/BasketContext";
@@ -15,7 +15,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { likedProducts, setLikedProducts } = useLiked(); // ✅ Contextni ishlatish
+  const { likedProducts, setLikedProducts } = useLiked(); 
   const { basketProducts, setBasketProducts } = useBasket();
 
 
@@ -39,7 +39,6 @@ const Home = () => {
     }
   };
 
-  // ❤️ Yoqtirish tugmasi funksiyasi
   const toggleHeart = (product) => {
     setLikedProducts((prevLiked) => {
       const isLiked = prevLiked.some((item) => item.id === product.id);

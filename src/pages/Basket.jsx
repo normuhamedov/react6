@@ -48,8 +48,6 @@ const Basket = () => {
                   <span className="text-blue-600 font-bold">${(product.price * (product.leng || 1)).toFixed(2)}</span>
                 </div>
               </NavLink>
-
-              {/* + / - tugmalari */}
               <div className="flex items-center justify-between mt-4">
                 <button
                   onClick={() => minusQuan(product.id)}
@@ -63,8 +61,6 @@ const Basket = () => {
                   <Plus />
                 </button>
               </div>
-
-              {/* Mahsulotni o‘chirish tugmasi */}
               <button
                 onClick={() => removeFromBasket(product.id)}
                 className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full"

@@ -45,7 +45,7 @@ const Navbar = () => {
 
             <button
               onClick={() => navigate("/heart")}
-              className="flex items-center text-white relative"
+              className="flex items-center text-white relative transition duration-500 hover:scale-150"
             >
               <Heart fill={likedProducts.length > 0 ? "red" : "none"} className={`${likedProducts.length > 0 ? "w-[30px] h-[30px]" : "scale-100"} transition-transform duration-500`}
               />
@@ -54,7 +54,7 @@ const Navbar = () => {
 
             <button
               onClick={() => navigate("/basket")}
-              className="flex items-center text-black relative"
+              className="flex items-center text-black relative transition duration-500 hover:scale-150"
             >
               <ShoppingCart fill={basketProducts.length > 0 ? "yellow" : "none"} className={`${basketProducts.length > 0 ? "w-[30px] h-[30px] " : "scale-100"} transition-transform duration-500 text-white`} />
               <span className=' absolute w-2 h-2 rounded-[50%] flex items-center justify-center text-[15px] top-[9.5px] left-[12px]'>{basketProducts.length > 0 ? basketProducts.length : ""}</span>

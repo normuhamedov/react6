@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 import { Heart, HeartOff } from "lucide-react";
 
 const Liked = () => {
-  const { likedProducts } = useLiked(); // ✅ Contextdan olib ishlatyapmiz
+  const { likedProducts } = useLiked(); 
 
   return (
     <div className="container mx-auto px-4 py-8">
